@@ -22818,11 +22818,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3dcb7923871a02e4288f8c602d3ab3f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.921
+      value: 23.079
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3dcb7923871a02e4288f8c602d3ab3f3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3dcb7923871a02e4288f8c602d3ab3f3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29028,7 +29028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
-  m_AgentTypeID: 0
+  m_AgentTypeID: 1479372276
   m_CollectObjects: 0
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 2, z: 0}
@@ -29037,7 +29037,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_UseGeometry: 0
   m_DefaultArea: 0
-  m_GenerateLinks: 0
+  m_GenerateLinks: 1
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
   m_OverrideTileSize: 0
@@ -29045,7 +29045,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.083333336
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 08fd10323cf24bc4e9aeccf247561ce0, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &1339225312
 PrefabInstance:
@@ -47492,6 +47492,8 @@ GameObject:
   - component: {fileID: 2085108783}
   - component: {fileID: 2085108782}
   - component: {fileID: 2085108781}
+  - component: {fileID: 2085108785}
+  - component: {fileID: 2085108786}
   m_Layer: 0
   m_Name: FloatingEnemy
   m_TagString: Untagged
@@ -47588,13 +47590,48 @@ Transform:
   m_GameObject: {fileID: 2085108780}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.105736, y: 4.07381, z: -4.2111897}
+  m_LocalPosition: {x: 9.105736, y: 6.07381, z: -4.2111897}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1085766833}
   m_Father: {fileID: 14132151}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2085108785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085108780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adda74f999a2fd74e81b7ab0e016993d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControllerMage
+  Target: {fileID: 1547493937}
+--- !u!195 &2085108786
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085108780}
+  m_Enabled: 1
+  m_AgentTypeID: 1479372276
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &2088300950
 PrefabInstance:
   m_ObjectHideFlags: 0
